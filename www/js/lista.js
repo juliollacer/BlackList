@@ -13,7 +13,9 @@ var cargarDB = {
         this.db.transaction(this.mostrarDB,this.mostrarDBError);
     },
     mostrarDB:function(tx){
-        var sql = "SELECT * FROM morosos;";
+        //PASO 4
+        //ordenar de forma descendiente
+        var sql = "SELECT * FROM morosos ORDER BY ultimos DESC;";
         console.log("lanzamos la consulta");
         tx.executeSql(
             sql,
