@@ -54,6 +54,25 @@ var confDB = {
             ;
         tx.executeSql(sql);
 
+        //PASO 3
+        //insertamos campos con el valor ultimos a 0
+
+        sql="INSERT INTO morosos(nombre_apellidos,cantidad,localidad,telefono,email,ultimos)"+
+            " VALUES('ELCULPEEEERR',230,'picassent',3342879,'juliolg1994@gmail.com',0);";
+        tx.executeSql(sql);
+
+        sql="INSERT INTO morosos(nombre_apellidos,cantidad,localidad,telefono,email,ultimos)"+
+            " VALUES('Robert Villama',230,'picassent',3342879,'jRobertlg1994@gmail.com',0);";
+        tx.executeSql(sql);
+
+        sql="INSERT INTO morosos(nombre_apellidos,cantidad,localidad,telefono,email,ultimos)"+
+            " VALUES('jorge Villama',230,'picassent',3342879,'jorgelg1994@gmail.com',0);";
+        tx.executeSql(sql);
+
+        sql="INSERT INTO morosos(nombre_apellidos,cantidad,localidad,telefono,email,ultimos)"+
+            " VALUES('caramierda',230,'picassent',3342879,'hueloamierda@gmail.com',0);";
+        tx.executeSql(sql);
+
         //PASO 2
         //segunda parte
         sql = "UPDATE morosos SET ultimos = 1 WHERE id IN (SELECt id FROM morosos ORDER BY id DESC LIMIT 3);";
