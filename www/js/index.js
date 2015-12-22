@@ -47,9 +47,19 @@ var confDB = {
                 "cantidad INT(390),"+
                 "localidad VARCHAR(126),"+
                 "telefono INT(64)," +
-                "email VARCHAR(126));"
+                "email VARCHAR(126),"+
+                //PASO 2
+                //campo integer con doble condicion
+                "ultimos INT(1) CHECK(ultimos >= 0 and ultimos <= 1));";
             ;
         tx.executeSql(sql);
+
+        //PASO 2
+        //segunda parte
+        sql = "UPDATE morosos SET ultimos = 1 WHERE id IN (SELECt id FROM morosos ORDER BY id DESC LIMIT 3);";
+        tx.executeSql(sql);
+
+
         console.log("creando inserts");
         //insertamos valores de ejemplo
         sql="INSERT INTO morosos(nombre_apellidos,cantidad,localidad,telefono,email)"+
