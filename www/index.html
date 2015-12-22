@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+
+        <!-- Hoja de Estilos / ThemeRoller verdeNaranja-->
+        <link rel="stylesheet" href="jquery/negroRojo.min.css" />
+        <link rel="stylesheet" href="./jquery/jquery.mobile.icons.min.css" />
+        <!-- Hoja de Estilos / CSS JQuery Mobile-->
+        <link rel="stylesheet" href="./jquery/jquery.mobile.structure-1.4.5.min.css" />
+
+        <title>Black List</title>
+    </head>
+    <body>
+    <div data-role="page" id="home" >
+
+
+
+        <img id="logo" src="./img/blacklist.png" width="360px" height="200px" />
+
+        <div data-role="main" class="ui-content" id="entradaRapida">
+
+            <ul data-role="listview">
+                <li>
+                    <div style="float: left">
+                       <label style="color: #ed1c24"> Entrada Rapida --></label>
+                    </div>
+                </li>
+                <li>
+                            <h2><input type="text" name="nombre_apellidos" id="nombre_apellidos" placeholder="Nombre"></h2>
+                </li>
+                <li>
+
+                            <input type="text" name="cantidad" id="cantidad" placeholder="Cantidad" >
+                </li>
+            </ul>
+        </div>
+        <div align="right">
+            <a data-role="button" data-inline="true"  id="registrar">Registrar</a>
+        </div>
+
+
+        <div data-role="footer" data-position="fixed">
+
+            <div data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li><a href="lista.html" data-ajax="false" data-icon="bullets">Lista</a></li>
+                    <li><a href="index.html" data-ajax="false" data-icon="home">Home</a></li>
+                    <li><a href="agregar.html" data-ajax="false" data-icon="plus">Añadir</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+</div>
+
+        <script type="text/javascript" src="jquery/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="jquery/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
